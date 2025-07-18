@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import FormLogin from "./components/Login";
 import Landing from "./landing_page/landing";
@@ -11,12 +10,12 @@ function App() {
 
     return (
       <>
-        <FormLogin/>
+        <FormLogin usuario={usuario}/>
         <div className="App">
           <Landing />
         </div>
       </>
   );
 }
-export default App;
 
+export default App;            
