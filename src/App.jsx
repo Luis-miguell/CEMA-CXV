@@ -3,13 +3,18 @@ import { useState } from "react";
 import FormLogin from "./components/Login";
 import Landing from "./landing_page/landing";
 
+const [usuario, setUsuario] = useState({nombre: "Admin", email: "admin@example.com", contrasenia: "12345"});
+
+
 function App() {
-    const [usuario, setUsuario] = useState({nombre: "Admin", email: "admin@example.com", contrasenia: "12345"});
 
     return (
-    <FormLogin usuario={usuario} />
-    <div className="App">
-    <Landing />
+      <>
+        <FormLogin usuario={usuario} />
+        <div className="App">
+          <Landing />
+        </div>
+      </>
   );
 }
 export default App;
