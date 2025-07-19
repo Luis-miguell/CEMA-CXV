@@ -105,7 +105,11 @@ h2 {
   z-index: 2;
   opacity: 0;
   animation: fadeIn 0.8s 0.4s ease forwards;
-  bottom: -500px;
+}
+
+.container-intro {
+  position: relative;
+  transform: translateY(calc(65vh - 50%));
 }
 
 .intro .title {
