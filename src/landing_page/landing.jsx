@@ -75,7 +75,7 @@ function Landing() {
               <ul className="slider">
                 <li className="slider-item active">
                   <div className="vertical">
-                    <div className="hide-mobile">
+                    <div className="hide-mobile container-intro">
                       <div className="intro">
                         <a href="#"><h1 className="title"><span className="underline">Welcome to CEMA</span></h1></a>
                       </div>
@@ -100,7 +100,7 @@ function Landing() {
 
                 <li className="slider-item">
                   <div className="vertical">
-                    <div className="hide-mobile">
+                    <div className="hide-mobile container-intro">
                       <div className="intro">
                       <a href="#"><h1 className="title"><span className="underline">About CEMA</span></h1></a>
                       </div>
@@ -125,7 +125,7 @@ function Landing() {
 
                 <li className="slider-item">
                   <div className="vertical">
-                    <div className="hide-mobile">
+                    <div className="hide-mobile container-intro">
                       <div className="intro">
                         <a href="#"><h1 className="title"><span className="underline">Things tha we do</span></h1></a>
                       </div>
@@ -150,7 +150,7 @@ function Landing() {
 
                 <li className="slider-item">
                   <div className="vertical">
-                    <div className="hide-mobile">
+                    <div className="hide-mobile container-intro">
                       <div className="intro">
                         <a href="#"><h1 className="title"><span className="underline">Taking care is important</span></h1></a>
                       </div>
