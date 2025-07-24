@@ -7,11 +7,11 @@ import Landing from "./landing_page/landing";
 
 
 function App() {
-    const [usuario] = useState({nombre: "Admin", email: "admin@example.com", contrasenia: "12345"});
+    //const [usuario] = useState({nombre: "Admin", email: "admin@example.com", contrasenia: "12345"});
 
     return (
       <>
-        <FormLogin usuario={usuario} />
+        <FormLogin/>
         <div className="App">
           <Landing />
         </div>
