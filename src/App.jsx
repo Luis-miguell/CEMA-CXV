@@ -7,7 +7,7 @@ import Landing from "./landing_page/landing";
 
 
 function App() {
-    //const [usuario] = useState({nombre: "Admin", email: "admin@example.com", contrasenia: "12345"});
+  const [usuario, setUsuario] = useState({nombre: "Admin", email: "admin@example.com", contrasenia: "12345"});
 
     return (
       <>
