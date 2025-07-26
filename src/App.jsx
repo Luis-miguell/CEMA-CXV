@@ -1,20 +1,24 @@
 import { useState } from "react";
-import FormLogin from "./components/Login";
-import Landing from "./landing_page/landing";
-
-
-
+import FormLogin from "./components/Login/Login.jsx";
+import Landing from "./components/landing_page/landing.jsx";
+import Register from "./components/register/register.jsx";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 function App() {
   const [usuario, setUsuario] = useState({nombre: "Admin", email: "admin@example.com", contrasenia: "12345"});
 
     return (
-      <>
-        <FormLogin usuario={usuario}/>
-        <div className="App">
-          <Landing />
-        </div>
-      </>
+        <BrowserRouter basename="/CEMA-CXV">
+        
+            <Routes>
+
+                <Route path="/" element={<Landing/>}/>
+                <Route path="/login" element={<FormLogin usuario={usuario}/>}/>
+                <Route path="/register" element={<Register setUsuario={setUsuario}/>}/>
+
+            </Routes>
+        
+        </BrowserRouter>
   );
 }
 

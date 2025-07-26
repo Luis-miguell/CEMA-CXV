@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import "./Login.css";
 
 function FormLogin({usuario}) {
@@ -31,10 +32,12 @@ function FormLogin({usuario}) {
         type="email" 
         id="email" 
         placeholder="Persona recicladora :)"
-        onInput={SetUsuarioL( user => ({
-            ...user, 
-            email: this.target.value
-        }))}
+        onInput={e => {
+          SetUsuarioL(user => ({
+            ...user,
+            email: e.target.value
+          }))
+        }}
         value={usuarioL.email}
         />
 
@@ -43,19 +46,25 @@ function FormLogin({usuario}) {
         type="password" 
         id="password" 
         placeholder="Contraseña de una persona recicladora :)"
-        onInput={SetUsuarioL( user => ({
-            ...user, 
-            contrasenia: this.target.value
-        }))}
+        onInput={e => {
+          SetUsuarioL(user => ({
+            ...user,
+            contrasenia: e.target.value
+          }))
+        }}
         value={usuarioL.contrasenia}
         />
 
         <div className="login-actions">
           <button type='submit'>Iniciar sesión</button>
           <div className="links">
-            <a href="#">Olvidé la contraseña</a>
+            <Link>
+              <button>Olvidé la contraseña</button>
+            </Link>
             <span> o </span>
-            <a href="#">No tengo cuenta</a>
+            <Link to="/register">
+              <button>No tengo cuenta</button>
+            </Link>
           </div>
         </div>
       </form>

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './landing.css';
 
 function Landing() {
@@ -15,8 +16,12 @@ function Landing() {
           </ul>
         </nav>
         <div className="account-buttons">
-          <button>Iniciar sesión</button>
-          <button>Crear cuenta</button>
+          <Link to="/login">
+            <button>Iniciar sesión</button>
+          </Link>
+          <Link to="/register">
+            <button>Crear cuenta</button>
+          </Link>
         </div>
       </header>
 
