@@ -52,6 +52,7 @@ body, html {
 }
 
 .login-form label {
+  color: var(--text-color);
   font-weight: bold;
   margin-top: 1rem;
   margin-bottom: 0.3rem;

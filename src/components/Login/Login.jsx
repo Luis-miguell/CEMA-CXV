@@ -58,12 +58,12 @@ function FormLogin({usuario}) {
         <div className="login-actions">
           <button type='submit'>Iniciar sesión</button>
           <div className="links">
-            <Link>
-              <button>Olvidé la contraseña</button>
+            <Link to="/password-recovery">
+              <a href="#">Olvidé la contraseña</a>
             </Link>
             <span> o </span>
             <Link to="/register">
-              <button>No tengo cuenta</button>
+              <a href="#">Crear una cuenta</a>
             </Link>
           </div>
         </div>

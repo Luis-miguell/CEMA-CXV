@@ -2,6 +2,8 @@ import { useState } from "react";
 import FormLogin from "./components/Login/Login.jsx";
 import Landing from "./components/landing_page/landing.jsx";
 import Register from "./components/register/register.jsx";
+import PasswordRecovery from "./components/passwordRecovery/passwordRecovery.jsx";
+import './App.css';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
                 <Route path="/" element={<Landing/>}/>
                 <Route path="/login" element={<FormLogin usuario={usuario}/>}/>
                 <Route path="/register" element={<Register setUsuario={setUsuario}/>}/>
+                <Route path="/password-recovery" element={<PasswordRecovery/>}/>
 
             </Routes>
         
