@@ -6,7 +6,6 @@ function Landing() {
 
   return (
     <>
-      <div className="container">
       <header className="navbar">
         <nav>
           <ul className="nav-links">
@@ -29,7 +28,6 @@ function Landing() {
         <h1>CEMA</h1>
         <p>TU ALIADO ECOLÓGICO</p>
       </main>
-    </div>
     </>
   );
 }
