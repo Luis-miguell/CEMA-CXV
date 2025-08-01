@@ -1,4 +1,5 @@
 class User {
+    /* Mejor que reciba un objeto */
     constructor(name, email, password, state, puntos) {
         this.name = name;
         this.email = email;
@@ -31,7 +32,7 @@ class User {
         this.name = name;
     }
 
-     setEmail(email) {
+    setEmail(email) {
     this.email = email;
     }
     setPassword(password) {
