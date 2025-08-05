@@ -64,7 +64,7 @@ class GestionUser{
         return this.usuarios.map(user => new User(user));
     }
     
-    getUser(id){
+    getUserById(id){
         let user = this.usuarios.find(user => user.id === id);
         if(!user){
             alert("Usuario no encontrado")
@@ -166,15 +166,6 @@ class GestionUser{
         return new User(this.usuarios[idx])
     }
 
-}his.usuarios.findIndex(user => user.id === id);
-        if(idx === -1 ) alert("Usuario no encontrado");
-        this.usuarios[idx] = {
-            ...this.usuarios[idx],
-            ...newDates,
-            id: this.usuarios[idx].id
-        };
-        this.saveUsers();
-        return new User(this.usuarios[idx])
-    }
+}
 
 } */
