@@ -6,6 +6,7 @@ function Landing() {
 
   return (
     <>
+
       <header className="navbar">
         <nav>
           <ul className="nav-links">
