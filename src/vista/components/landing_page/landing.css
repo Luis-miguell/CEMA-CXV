@@ -88,14 +88,11 @@ body {
 
 
 /* Landing */
-.container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(to bottom right, #e0f2f1, #ffffff);
-}
 
 .navbar {
+  top: 0;
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -143,19 +140,19 @@ body {
   align-items: center;
   text-align: center;
   padding: 3rem;
+  height: 100vh;
 }
 
 .hero h1 {
   font-size: 5rem;
-  color: #2e7d32;
+  color: #1b3d2f;
 }
 
 .hero p {
   font-size: 1.8rem;
   margin-top: 1rem;
-  color: #4caf50;
+  color: #27662b;
 }
-
 /* Recuperación de contraseña */
 .password-recovery-container {
   max-width: 500px;
@@ -209,4 +206,72 @@ body {
   font-size: 0.9rem;
   color: #555;
   text-align: center;
+}
+/* Registro de usuario */
+.register-image {
+  background-image: url('https://images.unsplash.com/photo-1754231537013-edf1da9619b4?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 50%;
+  float: left;
+}
+
+.register-form {
+  width: 50%;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.register-form h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #2e7d32;
+}
+
+.register-form label {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.register-form input {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.register-actions {
+  margin-top: 2rem;
+}
+
+.register-actions button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.register-actions button:hover {
+  background-color: #27662b;
+}
+
+.register-actions .links {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.register-actions a {
+  color: #2e7d32;
+  text-decoration: none;
+}
+
+.register-actions a:hover {
+  text-decoration: underline;
 }

@@ -1,4 +1,5 @@
 import '../landing_page/landing.css';
+import { Link } from 'react-router-dom';
 
 function Register() {
 
@@ -10,7 +11,7 @@ function Register() {
   
   return (
   <div className="login-container">
-    <div className="login-image" />
+    <div className="register-image" />
     
     <form onSubmit={handleRegister} className="register-form">
       <h1>Registrate</h1>

@@ -11,7 +11,7 @@ const Contexto = createContext(new User);
 
 function App() {
 
-  const [usuario, setUsuario] = useContext(Contexto);
+  const [usuario, setUsuario] = "hi"; /*useContext(Contexto);*/
     return (
         <BrowserRouter basename="/CEMA-CXV">
         
