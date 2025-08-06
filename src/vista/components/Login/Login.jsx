@@ -1,9 +1,13 @@
 import React from 'react';
 import { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import "./Login.css";
+import { useContext } from "react";
+import { UserContext } from "../../../UserProvider.jsx";
 
-function FormLogin({usuario}) {
+function FormLogin() {
+
+    const {usuario} = useContext(UserContext);
 
     const [usuarioL, SetUsuarioL] = useState({
         email: "",
@@ -13,7 +17,8 @@ function FormLogin({usuario}) {
     const handleLogin = (event) => {
         event.preventDefault();
 
-        if (usuarioL.email === usuario.email && usuarioL.contrasenia === usuario.contrasenia) {
+        if (usuarioL.email === usuario.email && usuarioL.contrasenia === usuario.getPassword()) {
+            Navigate("/"); 
             alert("Login successful!");
         } else {
             alert("Login failed.");
