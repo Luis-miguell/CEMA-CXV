@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import User from "../modelo/User.js";
+import User from "./modelo/User";
 
 const UserContext = createContext();
 
