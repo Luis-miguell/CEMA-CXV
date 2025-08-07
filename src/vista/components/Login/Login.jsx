@@ -1,13 +1,15 @@
 import React from 'react';
 import { useState } from "react";
-import { Link, Navigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "./Login.css";
 import { useContext } from "react";
 import { UserContext } from "../../../UserProvider.jsx";
 
 function FormLogin() {
 
-    const {usuario} = useContext(UserContext);
+  const Navigate = useNavigate()
+
+    const {usuario, setUsuarioContext} = useContext(UserContext);
 
     const [usuarioL, SetUsuarioL] = useState({
         email: "",
@@ -16,10 +18,16 @@ function FormLogin() {
 
     const handleLogin = (event) => {
         event.preventDefault();
+        console.log(usuario)
 
         if (usuarioL.email === usuario.email && usuarioL.contrasenia === usuario.getPassword()) {
             Navigate("/"); 
             alert("Login successful!");
+            setUsuarioContext(user => ({
+              ...user, 
+              state: true
+            })
+          )
         } else {
             alert("Login failed.");
         }
@@ -64,11 +72,11 @@ function FormLogin() {
           <button type='submit'>Iniciar sesión</button>
           <div className="links">
             <Link to="/password-recovery">
-              <a href="#">Olvidé la contraseña</a>
+              Olvidé la contraseña
             </Link>
             <span> o </span>
             <Link to="/register">
-              <a href="#">Crear una cuenta</a>
+              Crear una cuenta
             </Link>
           </div>
         </div>

@@ -1,29 +1,36 @@
 import '../landing_page/landing.css';
-import { Link, Navigate } from 'react-router-dom';
-import { useContext } from "react";
+import { Link } from 'react-router-dom';
+import { useContext, useState } from "react";
 import { UserContext } from "../../../UserProvider.jsx";
 import User from "../../../modelo/User.js";
-/* import { useNavigate } from 'react-router-dom'; */
+import { useNavigate } from 'react-router-dom';
 
 function Register() {
 
-  /* const Navigate = useNavigate(); */
+  const Navigate = useNavigate();
 
-  const { usuario, setUsuario } = useContext(UserContext);
+  const {setUsuarioContext } = useContext(UserContext);
   let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
+  const [user, setUser] = useState({
+    name: "",
+    lastName: "",
+    email: "",
+    password: "",
+    state: "",
+    points: 0
+  })
+
   const handleRegister = async (e) => {
-    
-   
     e.preventDefault();
-    if (!usuario.name || !usuario.lastname || !usuario.email || !usuario.getPassword()) {
+    
+    if (!user.name || !user.lastName || !user.email || !user.password) {
       alert("Por favor, completa todos los campos.");
       return;
     }
-    usuarios.push(usuario);
-    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    localStorage.setItem("actualUser", JSON.stringify(user));
     alert("Registro exitoso!");
-    setUsuario(new User(usuario)); 
+    setUsuarioContext(new User(user)); 
     Navigate("/login"); 
   }
   
@@ -40,12 +47,11 @@ function Register() {
       id="name" 
       placeholder="Tu nombre;)"
       onInput={e => {
-        setUsuario(user => ({
+        setUser(user => ({
           ...user,
           name: e.target.value
         }))
       }}
-      value={usuario.name}
       required
       />
       
@@ -55,12 +61,11 @@ function Register() {
       id="apellido" 
       placeholder="Tu apellido;)"
       onInput={e => {
-        setUsuario(user => ({
+        setUser(user => ({
           ...user,
-          apellido: e.target.value
+          lastName: e.target.value
         }))
       }}
-      value={usuario.apellido}
       required
       />
       <label htmlFor="email">Email</label>
@@ -69,12 +74,11 @@ function Register() {
       id="email" 
       placeholder="Tu email ;)"
       onInput={e => {
-        setUsuario(user => ({
+        setUser(user => ({
           ...user,
           email: e.target.value
         }))
       }}
-      value={usuario.email}
       required
       />
       <label htmlFor="password">Contraseña</label>
@@ -83,16 +87,19 @@ function Register() {
       id="password" 
       placeholder="Crea una contraseña. Segura y fácil de recordar;)"
       onInput={e => {
-        setUsuario(user => user.setPassword(e.target.value))
+        setUser(user => ({
+          ...user,
+          password: e.target.value
+
+        }))
       }}
-      value={usuario.getPassword()}
       required
       />
       <div className="register-actions">
         <button type='submit'>Registrarse</button>
         <div className="links">
           <Link to="/login">
-            <a href="#">Ya tengo una cuenta</a>
+            Ya tengo una cuenta
           </Link>
         </div>
       </div>

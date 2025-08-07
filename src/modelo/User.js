@@ -1,15 +1,15 @@
 class User {
     #password;
     #state;
-    #puntos;
+    #points;
     /* Mejor que reciba un objeto */
-    constructor(name,lastname, email, password, state, puntos) {
-        this.name = name;
-        this.lastname = lastname;
-        this.email = email;
-        this.#password = password;
-        this.#state = state;
-        this.#puntos = puntos;
+    constructor(info) {
+        this.name = info.name;
+        this.lastname = info.lastName;
+        this.email = info.email;
+        this.#password = info.password;
+        this.#state = info.state;
+        this.#points = info.points;
     }
     getName() {
         return this.name;
@@ -23,7 +23,7 @@ class User {
     }
 
     getPuntos() {
-        return this.#puntos;
+        return this.#points;
     }
 
     getPassword() {
@@ -47,8 +47,8 @@ class User {
     setState(state) {
         this.#state = state;
     }
-    setPuntos(puntos) {
-        this.#puntos = puntos;
+    setPuntos(points) {
+        this.#points = points;
     }
 }
 export default User;
