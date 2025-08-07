@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import User from "./modelo/User";
+import User from "../modelo/User";
 
 /* Este contexo es solo para el usuario actual */
 /* Puede extenderse a contener todos los usuarios */

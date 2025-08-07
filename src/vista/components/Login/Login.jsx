@@ -3,13 +3,15 @@ import { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import "./Login.css";
 import { useContext } from "react";
-import { UserContext } from "../../../UserProvider.jsx";
+import { UserContext } from '../../../utils/ActualUserProvider';
+import { usersContext } from '../../../utils/UsersPovider.jsx';
 
 function FormLogin() {
 
   const Navigate = useNavigate()
 
     const {usuario, setUsuarioContext} = useContext(UserContext);
+    const {usuarios, setUsuarios} = useContext(usersContext)
 
     const [usuarioL, SetUsuarioL] = useState({
         email: "",
@@ -18,19 +20,23 @@ function FormLogin() {
 
     const handleLogin = (event) => {
         event.preventDefault();
-        console.log(usuario)
 
-        if (usuarioL.email === usuario.email && usuarioL.contrasenia === usuario.getPassword()) {
-            Navigate("/"); 
-            alert("Login successful!");
-            setUsuarioContext(user => ({
-              ...user, 
-              state: true
-            })
-          )
+        const existe = usuarios.find(u => u.getEmail() === usuarioL.email)
+
+        if(existe){
+          if(existe.getPassword() === usuarioL.contrasenia){
+            setUsuarioContext(existe)
+            localStorage.setItem("ActualUser", JSON.stringify(existe))
+            alert("Inicio exitoso")
+            Navigate("/")
+          } else {
+            alert("Contraseña incorrecta")
+          }
         } else {
-            alert("Login failed.");
+          alert("Cuenta no encontrada")
+          return
         }
+        
     }
     
   return (

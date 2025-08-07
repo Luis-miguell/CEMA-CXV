@@ -1,7 +1,8 @@
 import '../landing_page/landing.css';
 import { Link } from 'react-router-dom';
 import { useContext, useState } from "react";
-import { UserContext } from "../../../UserProvider.jsx";
+import { UserContext } from "../../../utils/ActualUserProvider.jsx";
+import UsersContext, { usersContext } from '../../../utils/UsersPovider.jsx';
 import User from "../../../modelo/User.js";
 import { useNavigate } from 'react-router-dom';
 
@@ -10,7 +11,7 @@ function Register() {
   const Navigate = useNavigate();
 
   const {setUsuarioContext } = useContext(UserContext);
-  let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+  const {usuarios, setUsuarios} = useContext(usersContext);
 
   const [user, setUser] = useState({
     name: "",
@@ -28,9 +29,18 @@ function Register() {
       alert("Por favor, completa todos los campos.");
       return;
     }
-    localStorage.setItem("actualUser", JSON.stringify(user));
+
+    const exist = usuarios.some(u => u.getEmail() === user.email)
+
+    if(exist){
+      alert("Ya existe una cuenta vinculada con este correo.")
+      return 
+    }
+
+    const modif = [...usuarios, new User(user)]
+    setUsuarios(modif);
+    localStorage.setItem("usuarios", JSON.stringify(modif))
     alert("Registro exitoso!");
-    setUsuarioContext(new User(user)); 
     Navigate("/login"); 
   }
   

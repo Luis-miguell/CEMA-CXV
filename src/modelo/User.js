@@ -11,6 +11,20 @@ class User {
         this.#state = info.state;
         this.#points = info.points;
     }
+
+    toJSON() {
+        let data = {
+            name: this.name,
+            lastName: this.lastname,
+            email: this.email,
+            password: this.#password,
+            state: this.#state,
+            points: this.#points
+        };
+
+        return data;
+    }
+
     getName() {
         return this.name;
     }
