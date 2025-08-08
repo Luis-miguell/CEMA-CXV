@@ -13,7 +13,7 @@ function App() {
     return (
         <UsersProvider>
             <UserProvider>
-                <BrowserRouter basename="/CEMA-CXV">
+                <BrowserRouter basename="/CEMA-CXV/">
                     <Routes>
                         <Route path="/" element={<Landing/>}/>
                         <Route path="/login" element={<FormLogin/>}/>

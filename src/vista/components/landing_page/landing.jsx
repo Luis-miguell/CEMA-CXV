@@ -4,11 +4,15 @@ import './landing.css';
 import { UserContext } from '../../../utils/ActualUserProvider.jsx';
 
 function Landing() {
-  const { usuario, setUsuarioContext } = useContext(UserContext);
+  const { usuario, setUsuarioContext, load } = useContext(UserContext);
+
+  if(load){
+    return alert("Cargando datos")
+  } 
 
   const handleLogout = () => {
     setUsuarioContext("");
-    localStorage.removeItem("actualUser");
+    localStorage.removeItem("ActualUser");
   };
 
   const calcularDinero = (puntos) => {

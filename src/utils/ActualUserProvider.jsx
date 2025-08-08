@@ -7,15 +7,21 @@ import User from "../modelo/User";
 const UserContext = createContext();
 
 function UserProvider({ children }) {
-    const [usuario, setUsuarioContext] = useState(() => {
-        const user = JSON.parse(localStorage.getItem("actualUser"))
-        return user 
-            ? new User(user)
-            : ""
-    });
+    const [usuario, setUsuarioContext] = useState(null);
+    const [load, setLoad] = useState(true);
+
+    useEffect(() => {
+        const data = JSON.parse(localStorage.getItem("ActualUser"))
+        setUsuarioContext(() => {
+            return data 
+                ? new User(data)
+                : ""
+        })
+        setLoad(false)
+    }, [])
 
     return (
-        <UserContext.Provider value={{ usuario, setUsuarioContext }}>
+        <UserContext.Provider value={{ usuario, setUsuarioContext, load }}>
             {children}
         </UserContext.Provider>
     );
