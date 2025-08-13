@@ -18,6 +18,8 @@ function App() {
                         <Route path="/login" element={<FormLogin/>}/>
                         <Route path="/register" element={<Register/>}/>
                         <Route path="/password-recovery" element={<PasswordRecovery/>}/>
+                        <Route path="/profile/points" element={<Puntos/>}/>
+                        <Route path="*" element={<h1>404 Not Found</h1>}/>
                     </Routes>
                 </BrowserRouter>
             </UserProvider>
