@@ -6,10 +6,15 @@ import { UserContext } from '../../../utils/ActualUserProvider.jsx';
 function Landing() {
   const { usuario, setUsuarioContext, load } = useContext(UserContext);
 
-  if(load){
-    return alert("Cargando datos")
-  } 
-
+  if (load) {
+    return (
+      <div className="loader-container">
+        <div className="loader"></div>
+        <p>Cargando datos...</p>
+      </div>
+    );
+  }
+  
   const handleLogout = () => {
     setUsuarioContext("");
     localStorage.removeItem("ActualUser");
@@ -24,20 +29,16 @@ function Landing() {
     <>
       <header className="navbar">
         {usuario ? (
-            <>
-              <div></div>
-            </>
-          ) : (
-            <>
-              <nav>
-                <ul className="nav-links">
-                  <li><a href="#">Inicio</a></li>
-                  <li><a href="#">Acerca</a></li>
-                  <li><a href="#">Contacto</a></li>
-                </ul>
-              </nav>
-            </>
-          )}
+          <div><h5>CEMA</h5></div>
+        ) : (
+          <nav>
+            <ul className="nav-links">
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Acerca</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </nav>
+        )}
 
         <div className="account-buttons">
           {usuario ? (
@@ -47,12 +48,8 @@ function Landing() {
             </>
           ) : (
             <>
-              <Link to="/login">
-                <button>Iniciar sesión</button>
-              </Link>
-              <Link to="/register">
-                <button>Crear cuenta</button>
-              </Link>
+              <Link to="/login"><button>Iniciar sesión</button></Link>
+              <Link to="/register"><button>Crear cuenta</button></Link>
             </>
           )}
         </div>
@@ -63,7 +60,12 @@ function Landing() {
           <div className="user-stats">
             <h2>Historial de Reciclaje</h2>
             <p><strong>Puntos acumulados:</strong> {usuario.points || 0}</p>
-            <p><strong>Dinero equivalente:</strong> {calcularDinero(usuario.points || 0)} COP</p>
+            <p><strong>Dinero equivalente:</strong> {calcularDinero(usuario.points || 0).toLocaleString()} COP</p>
+            
+            <div className="extra-stats">
+              <p>♻️ Reciclajes realizados: {usuario.reciclajes || 0}</p>
+              <p>🌱 CO₂ ahorrado: {usuario.co2 || 0} kg</p>
+            </div>
           </div>
         ) : (
           <>
