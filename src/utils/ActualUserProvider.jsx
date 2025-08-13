@@ -17,7 +17,9 @@ function UserProvider({ children }) {
                 ? new User(data)
                 : ""
         })
-        setLoad(false)
+        setTimeout(() => {
+            setLoad(false)
+        }, 1500);
     }, [])
 
     return (
