@@ -34,3 +34,4 @@ function Puntos() {
       </main>
   );
 }
+export default Puntos;
