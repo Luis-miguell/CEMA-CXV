@@ -14,6 +14,14 @@ function Landing() {
       </div>
     );
   }
+
+/* 
+  const handleActiveLogin = () => {
+    const iniciado = usuario.getState();
+    if (iniciado){
+      // Ocultar botones y mostrar usuario y sus acciones
+    } 
+  }; */
   
   const handleLogout = () => {
     setUsuarioContext("");

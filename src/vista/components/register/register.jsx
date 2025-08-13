@@ -9,8 +9,6 @@ import { useNavigate } from 'react-router-dom';
 function Register() {
 
   const Navigate = useNavigate();
-
-  const {setUsuarioContext } = useContext(UserContext);
   const {usuarios, setUsuarios} = useContext(usersContext);
 
   const [user, setUser] = useState({

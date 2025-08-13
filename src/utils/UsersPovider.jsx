@@ -1,5 +1,6 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import User from "../modelo/User.js";
+
 const usersContext = createContext();
 
 function UsersProvider({children}){
@@ -19,5 +20,5 @@ function UsersProvider({children}){
 
 }
 
-export {usersContext};
+export { usersContext };
 export default UsersProvider;
