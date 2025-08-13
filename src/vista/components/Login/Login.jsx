@@ -10,9 +10,8 @@ function FormLogin() {
 
   const Navigate = useNavigate()
 
-    const {usuario, setUsuarioContext} = useContext(UserContext);
-    const {usuarios, setUsuarios} = useContext(usersContext)
-
+    const {setUsuarioContext} = useContext(UserContext);
+    const {usuarios} = useContext(usersContext)
     const [usuarioL, SetUsuarioL] = useState({
         email: "",
         contrasenia: ""
@@ -25,6 +24,9 @@ function FormLogin() {
 
         if(existe){
           if(existe.getPassword() === usuarioL.contrasenia){
+            /* Si el usuario existe y la contraseña es correcta, se actualiza el estado del usuario
+             y se guarda en el localStorage */
+            existe.setState(true)
             setUsuarioContext(existe)
             localStorage.setItem("ActualUser", JSON.stringify(existe))
             alert("Inicio exitoso")
