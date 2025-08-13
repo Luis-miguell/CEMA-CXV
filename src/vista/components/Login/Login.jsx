@@ -26,7 +26,7 @@ function FormLogin() {
         if(existe){
           if(existe.getPassword() === usuarioL.contrasenia){
             setUsuarioContext(existe)
-            localStorage.setItem("ActualUser", JSON.stringify(existe))
+            localStorage.setItem("ActualUser", JSON.stringify(existe.toJSON))
             alert("Inicio exitoso")
             Navigate("/")
           } else {
