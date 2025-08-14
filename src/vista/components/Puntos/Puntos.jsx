@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../../../utils/ActualUserProvider.jsx';
-import './Puntos.css';
 
 
 

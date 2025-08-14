@@ -6,6 +6,7 @@ import './App.css';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import { UserProvider } from "../utils/ActualUserProvider.jsx";
 import UsersProvider from "../utils/UsersPovider.jsx";
+import Puntos from "./components/Puntos/Puntos.jsx";
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
                         <Route path="/login" element={<FormLogin/>}/>
                         <Route path="/register" element={<Register/>}/>
                         <Route path="/password-recovery" element={<PasswordRecovery/>}/>
-                        <Route path="/profile/points" element={<Puntos/>}/>
+                        <Route path="/points" element={<Puntos/>}/>
                         <Route path="*" element={<h1>404 Not Found</h1>}/>
                     </Routes>
                 </BrowserRouter>

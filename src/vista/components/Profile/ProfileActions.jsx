@@ -7,11 +7,11 @@ function ProfileActions() {
 
   return (
     <div>
-      <Link to="/profile/update">Editar perfil</Link>
-      <Link to="/profile/history">Ver historial de reciclaje</Link>
-      <Link to="/profile/points">Ver puntos</Link>
-      <Link to="/profile/rewards">Retirar recompensas</Link>
-      <Link to="/profile/logout" onClick={() => {
+      <Link to="/update">Editar perfil</Link>
+      <Link to="/history">Ver historial de reciclaje</Link>
+      <Link to="/points">Ver puntos</Link>
+      <Link to="/rewards">Retirar recompensas</Link>
+      <Link to="/logout" onClick={() => {
         localStorage.removeItem("ActualUser");
         setUsuarioActual("");
       }}>Cerrar sesión</Link>
