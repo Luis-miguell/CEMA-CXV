@@ -59,6 +59,10 @@ function Landing() {
           )}
         </div>
       </header>
+      <main className="hero">
+          <h1>CEMA</h1>
+          <p>TU ALIADO ECOLÓGICO</p>
+      </main>
 
       
     </>

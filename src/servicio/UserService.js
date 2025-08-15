@@ -50,7 +50,9 @@ class UserService {
 
     editUser(id, newDates){
         let idx = this.usuarios.findIndex(user => user.id === id);
+        
         if(idx === -1 ) alert("Usuario no encontrado");
+
         this.usuarios[idx] = {
             ...this.usuarios[idx],
             ...newDates,
