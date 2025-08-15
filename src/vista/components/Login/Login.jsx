@@ -28,7 +28,7 @@ function FormLogin() {
              y se guarda en el localStorage */
             existe.setState(true)
             setUsuarioContext(existe)
-            localStorage.setItem("ActualUser", JSON.stringify(existe.toJSON))
+            localStorage.setItem("ActualUser", JSON.stringify(existe))
             alert("Inicio exitoso")
             Navigate("/")
           } else {

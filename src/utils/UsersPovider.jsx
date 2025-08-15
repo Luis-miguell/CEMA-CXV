@@ -6,10 +6,10 @@ const usersContext = createContext();
 function UsersProvider({children}){
 
     const [usuarios, setUsuarios] = useState(() => {
-        const data = JSON.parse(localStorage.getItem("usuarios"))
-        return data
-            ? data.map(user => new User(user))
-            : []
+    const data = JSON.parse(localStorage.getItem("usuarios"))
+    return data
+        ? data.map(user => new User(user))
+        : []
     })
 
     return(
