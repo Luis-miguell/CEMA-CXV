@@ -1,12 +1,14 @@
-# React + Vite
+# CEMA CXV  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositorio contiene uno de los proyectos finales desarrollados en la **Corte CXV de Steam Academy**.  
+El propósito de este proyecto es demostrar las habilidades adquiridas en el uso de **React (JSX)**, **HTML**, **CSS** y buenas prácticas de programación web.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías utilizadas
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React (JSX)** – Para la construcción de componentes reutilizables.  
+- **HTML5** – Estructura semántica de la aplicación.  
+- **CSS3** – Estilos personalizados.  
+- **JavaScript (ES6+)** – Lógica y manejo de datos.  
+- **Vite / Create React App** – (Dependiendo del caso) para levantar el entorno de desarrollo.  
