@@ -140,7 +140,7 @@ body {
   align-items: center;
   text-align: center;
   padding: 3rem;
-  height: 100vh;
+  height: 70vh;
 }
 
 .hero h1 {
@@ -342,3 +342,103 @@ body {
   border-radius: 10px;
 }
 
+/* Dashboard Layout */
+.dashboard {
+  margin-top: 80px; /* separa del navbar fijo */
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 200px 1fr 250px;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #3a3a3a;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar li {
+  margin: 1rem 0;
+}
+
+/* Main Section */
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+.logo-cema h1 {
+  font-size: 3rem;
+  color: #2e7d32;
+}
+.logo-cema p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+.puntos-box {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+.puntos-box p {
+  font-weight: bold;
+  color: #444;
+}
+.puntos-box h2 {
+  font-size: 2rem;
+  color: #2e7d32;
+  margin-top: 0.5rem;
+}
+
+/* Historial */
+.historial {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+.historial h3 {
+  background: #2e7d32;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.historial ul {
+  list-style: none;
+  padding: 0;
+}
+.historial li {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.9rem;
+}
+.logoCema{
+  width: 320px;
+  height: auto;
+}
