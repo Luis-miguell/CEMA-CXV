@@ -13,7 +13,6 @@ function Register() {
     lastName: "",
     email: "",
     password: "",
-    state: "",
     points: 0
   });
 

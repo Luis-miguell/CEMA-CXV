@@ -1,14 +1,11 @@
 class User {
     #password;
-    #state;
     #points;
-    /* Mejor que reciba un objeto */
     constructor(info) {
         this.name = info.name;
         this.lastname = info.lastName;
         this.email = info.email;
         this.#password = info.password;
-        this.#state = info.state;
         this.#points = info.points;
     }
 
@@ -18,7 +15,6 @@ class User {
             lastName: this.lastname,
             email: this.email,
             password: this.#password,
-            state: this.#state,
             points: this.#points
         };
 
@@ -44,10 +40,6 @@ class User {
         return this.#password;
     }
 
-    getState() {
-        return this.#state;
-    }
-
     setName(name) {
         this.name = name;
     }
@@ -57,9 +49,6 @@ class User {
     }
     setPassword(password) {
         this.#password = password;
-    }
-    setState(state) {
-        this.#state = state;
     }
     setPuntos(points) {
         this.#points = points;

@@ -19,19 +19,24 @@ function FormLogin() {
 
     const existe = usuarios.find(u => u.getEmail() === usuarioL.email);
 
-    if (existe) {
-      if (existe.getPassword() === usuarioL.contrasenia) {
-        existe.setState(true);
-        setUsuarioContext(existe);
-        localStorage.setItem("ActualUser", JSON.stringify(existe));
-        alert("Inicio exitoso");
-        Navigate("/");
-      } else {
-        alert("Contraseña incorrecta");
-      }
-    } else {
-      alert("Cuenta no encontrada");
-      return;
+
+        const existe = usuarios.find(u => u.getEmail() === usuarioL.email)
+
+        if(existe){
+          if(existe.getPassword() === usuarioL.contrasenia){
+            /* Si el usuario existe y la contraseña es correcta, se actualiza el estado del usuario
+             y se guarda en el localStorage */
+            setUsuarioContext(existe)
+            localStorage.setItem("ActualUser", JSON.stringify(existe))
+            alert("Inicio exitoso")
+            Navigate("/")
+          } else {
+            alert("Contraseña incorrecta")
+          }
+        } else {
+          alert("Cuenta no encontrada")
+          return
+        }
     }
   };
 
