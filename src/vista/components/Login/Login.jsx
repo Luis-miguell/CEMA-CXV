@@ -19,9 +19,6 @@ function FormLogin() {
 
     const existe = usuarios.find(u => u.getEmail() === usuarioL.email);
 
-
-        const existe = usuarios.find(u => u.getEmail() === usuarioL.email)
-
         if(existe){
           if(existe.getPassword() === usuarioL.contrasenia){
             /* Si el usuario existe y la contraseña es correcta, se actualiza el estado del usuario
@@ -80,6 +77,5 @@ function FormLogin() {
       </form>
     </div>
   );
-}
 
 export default FormLogin;
