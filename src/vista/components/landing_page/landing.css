@@ -1,444 +1,330 @@
-/* Reset básico */
-* {
+/* =====================
+   ESTILOS GENERALES
+===================== */
+body {
   margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  color: #333;
   padding: 0;
+}
+* {
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4fdf6;
-  color: #1b3d2f;
+h1, h2, h3, h5 {
+  margin: 0;
+  font-weight: 600;
 }
 
-/* Imagen de fondo para login */
-.login-image {
-  background-image: url('https://images.unsplash.com/photo-1741850821596-f29a6e58356b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  width: 50%;
-  float: left;
-}
-
-/* Contenedor general para login */
-.login-container {
-  display: flex;
-  height: 100vh;
-}
-
-.login-form {
-  width: 50%;
-  padding: 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: #ffffff;
-}
-
-.login-form h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #2e7d32;
-}
-
-.login-form label {
-  margin-top: 1rem;
-  font-weight: bold;
-}
-
-.login-form input {
-  padding: 0.7rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-top: 0.5rem;
-}
-
-.login-actions {
-  margin-top: 2rem;
-}
-
-.login-actions button {
-  background-color: #2e7d32;
-  color: white;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.login-actions button:hover {
-  background-color: #27662b;
-}
-
-.login-actions .links {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-}
-
-.login-actions a {
-  color: #2e7d32;
+a {
+  color: #16a34a;
   text-decoration: none;
 }
 
-.login-actions a:hover {
+a:hover {
   text-decoration: underline;
 }
 
-
-/* Landing */
-
-.navbar {
-  top: 0;
-  position: fixed;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 3rem;
-  background-color: #2e7d32;
-  color: white;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
-.account-buttons button {
-  margin-left: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: white;
-  color: #2e7d32;
+button {
+  background: #16a34a;
   border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.account-buttons button:hover {
-  background-color: #dcedc8;
-}
-
-.hero {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 3rem;
-  height: 70vh;
-}
-
-.hero h1 {
-  font-size: 5rem;
-  color: #1b3d2f;
-}
-
-.hero p {
-  font-size: 1.8rem;
-  margin-top: 1rem;
-  color: #27662b;
-}
-/* Recuperación de contraseña */
-.password-recovery-container {
-  max-width: 500px;
-  margin: 6rem auto;
-  padding: 2.5rem;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-}
-
-.password-recovery-container h2 {
-  text-align: center;
-  color: #2e7d32;
-  margin-bottom: 1.5rem;
-}
-
-.password-recovery {
-  display: flex;
-  flex-direction: column;
-}
-
-.password-recovery label {
-  margin-top: 1rem;
-  font-weight: bold;
-}
-
-.password-recovery input {
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  margin-top: 0.5rem;
-}
-
-.password-recovery button {
-  margin-top: 1.5rem;
-  padding: 0.7rem;
-  background-color: #2e7d32;
-  color: white;
-  border: none;
+  padding: 10px 18px;
+  color: #fff;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
+  transition: 0.3s;
+  font-size: 14px;
 }
 
-.password-recovery button:hover {
-  background-color: #27662b;
+button:hover {
+  background: #16a34a;
 }
 
-.password-recovery-container p {
-  margin-top: 1.5rem;
-  font-size: 0.9rem;
-  color: #555;
-  text-align: center;
-}
-/* Registro de usuario */
-.register-image {
-  background-image: url('https://images.unsplash.com/photo-1754231537013-edf1da9619b4?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  width: 50%;
-  float: left;
-}
-
-.register-form {
-  width: 50%;
-  padding: 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #ffffff;
-}
-
-.register-form h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #2e7d32;
-}
-
-.register-form label {
-  margin-top: 1rem;
-  font-weight: bold;
-}
-
-.register-form input {
-  padding: 0.7rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-top: 0.5rem;
-}
-
-.register-actions {
-  margin-top: 2rem;
-}
-
-.register-actions button {
-  background-color: #2e7d32;
-  color: white;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.register-actions button:hover {
-  background-color: #27662b;
-}
-
-.register-actions .links {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-}
-
-.register-actions a {
-  color: #2e7d32;
-  text-decoration: none;
-}
-
-.register-actions a:hover {
-  text-decoration: underline;
-}
-/* Estilos para el dashboard de usuario */
-.user-stats {
-  background-color: #ffffff;
-  padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 450px;
-  width: 100%;
-  text-align: center;
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-.user-stats h2 {
-  font-size: 2rem;
-  color: #2e7d32;
-  margin-bottom: 1.5rem;
-}
-
-.user-stats p {
-  font-size: 1.2rem;
-  margin: 0.8rem 0;
-  color: #1b3d2f;
-  font-weight: bold;
-}
-
-.user-stats p strong {
-  color: #2e7d32;
-}
-
-/* Animación sutil */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-/* Loader */
+/* =====================
+   LOADER
+===================== */
 .loader-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80vh;
-  gap: 1rem;
+  height: 100vh;
 }
 
 .loader {
-  border: 6px solid #f3f3f3;
-  border-top: 6px solid #2e7d32;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ccc;
+  border-top: 4px solid #16a34a;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 0.8s linear infinite;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  to { transform: rotate(360deg); }
 }
 
-/* Panel usuario */
-
-.extra-stats {
-  margin-top: 1.5rem;
-  background: #f4fdf6;
-  padding: 1rem;
-  border-radius: 10px;
+/* =====================
+   NAVBAR
+===================== */
+.navbar {
+  background: #fff;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-/* Dashboard Layout */
-.dashboard {
-  margin-top: 80px; /* separa del navbar fijo */
+.nav-links {
   display: flex;
   justify-content: center;
-  align-items: stretch;
-  padding: 2rem;
-  gap: 2rem;
-}
-
-.dashboard-container {
-  display: grid;
-  grid-template-columns: 200px 1fr 250px;
-  gap: 2rem;
-  width: 100%;
-  max-width: 1200px;
-}
-
-/* Sidebar */
-.sidebar {
-  background: #3a3a3a;
-  color: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-}
-.sidebar ul {
+  align-items: center;
+  height: 100%;
+  margin: auto;
+  gap: 20px;
   list-style: none;
 }
-.sidebar li {
-  margin: 1rem 0;
+
+.nav-links li a {
+  font-weight: 500;
+  color: #333;
 }
 
-/* Main Section */
-.main-section {
+.nav-links li a:hover {
+  color: #0d612c;
+}
+
+.account-buttons {
   display: flex;
-  flex-direction: column;
+  gap: 12px;
   align-items: center;
-  justify-content: center;
-  background: #fff;
-  border-radius: 12px;
-  padding: 2rem;
-  text-align: center;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
 }
 
-.logo-cema h1 {
-  font-size: 3rem;
-  color: #2e7d32;
+.account-buttons span {
+  font-weight: 500;
 }
-.logo-cema p {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
+
+/* =====================
+   HERO (no logueado)
+===================== */
+.hero {
+  padding: 100px 50px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: #16a34a;
+}
+
+.hero p {
+  font-size: 20px;
   color: #555;
 }
 
-.puntos-box {
-  margin-top: 2rem;
-  padding: 1.5rem;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  background: #f9f9f9;
-}
-.puntos-box p {
-  font-weight: bold;
-  color: #444;
-}
-.puntos-box h2 {
-  font-size: 2rem;
-  color: #2e7d32;
-  margin-top: 0.5rem;
+/* =====================
+   DASHBOARD (logueado)
+===================== */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
 }
 
-/* Historial */
+.sidebar {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.main-section {
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 40px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo-cema h1 {
+  font-size: 42px;
+  color: #16a34a;
+}
+
+.puntos-box {
+  margin-top: 20px;
+}
+
+.puntos-box p {
+  font-size: 18px;
+  color: #444;
+}
+
+.puntos-box h2 {
+  font-size: 32px;
+  color: #16a34a;
+  font-weight: bold;
+}
+
 .historial {
   background: #fff;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
+
 .historial h3 {
-  background: #2e7d32;
-  color: white;
-  padding: 0.5rem;
-  border-radius: 8px;
-  text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 15px;
+  font-size: 18px;
 }
+
 .historial ul {
   list-style: none;
   padding: 0;
 }
+
 .historial li {
-  padding: 0.3rem 0;
-  border-bottom: 1px solid #ddd;
-  font-size: 0.9rem;
+  padding: 6px 0;
+  font-size: 14px;
+  color: #444;
 }
-.logoCema{
-  width: 320px;
-  height: auto;
+
+/* =====================
+   LOGIN Y REGISTER
+===================== */
+.register-container {
+  display: flex;
+  justify-content: right;
+  padding-right: 15%;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(https://media-cdn.tripadvisor.com/media/photo-m/1280/16/1c/38/fe/un-sitio-para-disfrutar.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-container {
+  display: flex;
+  justify-content: right;
+  padding-right: 15%;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1526239187794-f8c27c7872ee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmF0dXJhbGV6YSUyMHBhaXNhamV8ZW58MHx8MHx8fDA%3D);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-form, .register-form {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.login-form h1, .register-form h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #16a34a;
+}
+
+.login-form label, .register-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #444;
+}
+
+.login-form input, .register-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.login-form input:focus, .register-form input:focus {
+  border-color: #16a34a;
+}
+
+.login-actions, .register-actions {
+  text-align: center;
+}
+
+.login-actions .links, .register-actions .links {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+/* =====================
+   PASSWORD RECOVERY
+===================== */
+.password-recovery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.password-recovery {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.password-recovery h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #16a34a;
+}
+
+.password-recovery label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #444;
+}
+
+.password-recovery input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.password-recovery button {
+  width: 100%;
+}
+
+.info-text {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+.about {
+  font-size: 14px;
+  color: #777;
+  padding: 100px 50px;
 }

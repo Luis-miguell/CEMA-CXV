@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './landing.css';
 import { UserContext } from '../../../utils/ActualUserProvider.jsx';
-import logoCema from "../../../imgs/logoCema.png";
 
 function Landing() {
   const { usuario, setUsuarioContext, load } = useContext(UserContext);
@@ -71,7 +70,7 @@ function Landing() {
             {/* Centro: logo + puntos */}
             <section className="main-section">
               <div className="logo-cema">
-                <img className='logoCema' src={logoCema} alt="Logo CEMA" />
+                <h1>CEMA</h1>
               </div>
               <div className="puntos-box">
                 <p>Mis puntos:</p>
@@ -92,10 +91,19 @@ function Landing() {
             </aside>
           </div>
         ) : (
-          <div className="hero">
-            <h1>CEMA</h1>
-            <p>TU ALIADO ECOLÓGICO</p>
-          </div>
+          <>
+            <div className="hero">
+              <h1>CEMA</h1>
+              <p>TU ALIADO ECOLÓGICO</p>
+            </div>
+            <div className='about'>
+              <h2>¿Qué es CEMA?</h2>
+              <p>
+                CEMA es una plataforma que te permite acumular puntos por tus <br />
+                actividades de reciclaje y canjearlos por beneficios.
+              </p>
+            </div>
+          </>
         )}
       </main>
     </>
