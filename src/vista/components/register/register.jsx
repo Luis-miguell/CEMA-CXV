@@ -1,8 +1,7 @@
 import '../landing_page/landing.css';
 import { Link } from 'react-router-dom';
 import { useContext, useState } from "react";
-import { UserContext } from "../../../utils/ActualUserProvider.jsx";
-import UsersContext, { usersContext } from '../../../utils/UsersPovider.jsx';
+import { usersContext } from '../../../utils/UsersPovider.jsx';
 import User from "../../../modelo/User.js";
 import { useNavigate } from 'react-router-dom';
 
@@ -16,7 +15,6 @@ function Register() {
     lastName: "",
     email: "",
     password: "",
-    state: "",
     points: 0
   })
 

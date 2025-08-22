@@ -26,7 +26,6 @@ function FormLogin() {
           if(existe.getPassword() === usuarioL.contrasenia){
             /* Si el usuario existe y la contraseña es correcta, se actualiza el estado del usuario
              y se guarda en el localStorage */
-            existe.setState(true)
             setUsuarioContext(existe)
             localStorage.setItem("ActualUser", JSON.stringify(existe))
             alert("Inicio exitoso")
