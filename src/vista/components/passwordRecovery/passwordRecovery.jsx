@@ -145,7 +145,7 @@ function PasswordRecovery() {
     if(verififyTime(code.date, currentTime, 5)){
       if(code.code == userCode){
         alert("El código es correcto. \nProcede a cambiar la contraseña.")
-        setPhase(3);
+        setPhase(2);
       } else {
         alert("El código es incorrecto.")
       }
