@@ -1,6 +1,6 @@
 import React from 'react';
 import "../landing_page/landing.css";
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { usersContext } from '../../../utils/UsersPovider.jsx';
 import enviarCorreo from './emailjs.js';
 import './passwordRecovery.css';

@@ -35,9 +35,8 @@ function FormLogin() {
           return
         }
     }
-  };
 
-  return (
+    return(
     <div className="login-container">
       <form onSubmit={handleLogin} className="login-form">
         <h1>Iniciar sesión</h1>
@@ -77,5 +76,9 @@ function FormLogin() {
       </form>
     </div>
   );
+
+  };
+
+  
 
 export default FormLogin;
