@@ -11,14 +11,17 @@ function UserProvider({ children }) {
     const [load, setLoad] = useState(true);
 
     useEffect(() => {
-        const data = JSON.parse(localStorage.getItem("ActualUser"))
-        setUsuarioContext(() => {
-            return data 
-                ? new User(data)
-                : ""
-        })
-        setLoad(false);
-    }, [])
+    try {
+        const raw = localStorage.getItem("ActualUser");
+        const data = JSON.parse(raw);
+        setUsuarioContext(data ? new User(data) : null);
+    } catch (error) {
+        console.error("Error al parsear ActualUser desde localStorage", error);
+        setUsuarioContext(null);
+    }
+    setLoad(false);
+}, []);
+
 
     return (
         <UserContext.Provider value={{ usuario, setUsuarioContext, load }}>

@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 import './landing.css';
 import { UserContext } from '../../../utils/ActualUserProvider.jsx';
 import logoCema from "../../../imgs/logoCema.png";
+import ProfileActions from '../Profile/ProfileActions.jsx';
 
 function Landing() {
   const { usuario, setUsuarioContext, load } = useContext(UserContext);
-  const [historial, setHistorial] = useState([
+  const [mostrarOpciones, setMostrarOpciones] = useState(false);
+  const [historial,] = useState([
     { id: 1, puntos: 50, fecha: "2025-08-01" },
     { id: 2, puntos: 30, fecha: "2025-08-10" },
     { id: 3, puntos: 57, fecha: "2025-08-15" },
@@ -24,6 +26,11 @@ function Landing() {
   const handleLogout = () => {
     setUsuarioContext("");
     localStorage.removeItem("ActualUser");
+  };
+  //Mostrar menú opciones
+
+  const toggleOpciones = () => {
+    setMostrarOpciones(prev => !prev);
   };
 
   return (
@@ -44,8 +51,13 @@ function Landing() {
         <div className="account-buttons">
           {usuario ? (
             <>
+              <img className="user-avatar" src={usuario.avatar} alt={usuario.name} />
               <span>Hola, {usuario.name}</span>
               <button onClick={handleLogout}>Cerrar sesión</button>
+              <button onClick={toggleOpciones}>
+              <i className={`bi ${mostrarOpciones ? "bi-chevron-up" : "bi-chevron-down"}`}></i>
+              </button>
+              <ProfileActions className={mostrarOpciones ? "show" : ""} />
             </>
           ) : (
             <>

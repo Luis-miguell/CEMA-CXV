@@ -99,6 +99,7 @@ body {
   padding: 1rem 3rem;
   background-color: #2e7d32;
   color: white;
+  z-index: 10;
 }
 
 .nav-links {
@@ -378,6 +379,11 @@ body {
   gap: 2rem;
   width: 100%;
   max-width: 1200px;
+}
+.user-avatar{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
 }
 
 /* Sidebar */
