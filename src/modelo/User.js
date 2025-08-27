@@ -7,6 +7,7 @@ class User {
         this.email = info.email;
         this.#password = info.password;
         this.#points = info.points;
+        this.avatar = info.avatar || 'src/imgs/Unknown user.jpeg';
     }
 
     toJSON() {
@@ -15,7 +16,8 @@ class User {
             lastName: this.lastname,
             email: this.email,
             password: this.#password,
-            points: this.#points
+            points: this.#points,
+            avatar: this.avatar
         };
 
         return data;
