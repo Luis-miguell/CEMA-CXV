@@ -39,6 +39,15 @@
 html, body{
   padding:0;
   margin:0;
+
+}
+
+::-webkit-scrollbar{
+  width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+  background:var(--green-600);
 }
 
 body{
@@ -104,14 +113,15 @@ button:active,
 ===================== */
 .navbar{
   background:var(--bg);
-  padding:12px 230px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  width: 100%;
+  width: 947px;
+  transform: translateX(-50%);
   position: fixed;
-  left: 0;
+  left: 50%;
   top: 0;
+  padding: 15px 35px;
   z-index: 1000;
 }
 .nav-links{
@@ -144,7 +154,6 @@ button:active,
   display:grid;
   grid-template-columns:1fr 2fr 1fr;
   gap:20px;
-  padding:20px;
 }
 
 .sidebar,
@@ -204,15 +213,6 @@ button:active,
   border-color:rgba(0,255,13,1);
 }
 
-/* Registro (imagen lateral, opcional) */
-.register-image{
-  background-image:url('https://images.unsplash.com/photo-1754231537013-edf1da9619b4?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  background-size:cover;
-  background-position:center;
-  height:100vh;
-  width:50%;
-  float:left;
-}
 .register-form{
   width:50%;
   padding:4rem;
@@ -228,9 +228,9 @@ button:active,
 }
 
 .logo-cema h1{
-  font-size:36px;
+  font-size:36px !important;
   font-weight:700;
-  color:#111827;
+  color:#111827 !important;
 }
 
 /* Bloque puntos (landing logueado) */
@@ -255,12 +255,13 @@ button:active,
   background-repeat:no-repeat;
   background-size:cover;
 }
+/*
 .register-container{
   background-image:url(https://media-cdn.tripadvisor.com/media/photo-m/1280/16/1c/38/fe/un-sitio-para-disfrutar.jpg);
 }
 .login-container{
   background-image:url(https://images.unsplash.com/photo-1526239187794-f8c27c7872ee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmF0dXJhbGV6YSUyMHBhaXNhamV8ZW58MHx8MHx8fDA%3D);
-}
+}*/
 
 .login-form,
 .register-form{
@@ -371,7 +372,6 @@ button:active,
   display:grid;
   grid-template-columns:repeat(3, 1fr);
   gap:25px;
-  padding:30px;
   margin-top: 100px;
 }
 
@@ -456,9 +456,8 @@ button:active,
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:80px 24px;
   gap:40px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .hero-text{ flex:1; }
 .hero-text h1{
@@ -586,7 +585,7 @@ button:active,
 
 /* Dashboard Layout */
 .dashboard {
-  margin-top: 80px; /* separa del navbar fijo */
+  margin-top: 10px; /* separa del navbar fijo */
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -667,6 +666,8 @@ button:active,
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  overflow: scroll;
+  height: 300px;
 }
 .historial h3 {
   background: #2e7d32;
@@ -688,4 +689,39 @@ button:active,
 .logoCema{
   width: 320px;
   height: auto;
+}
+
+/* =====================
+   FORMULARIO ACTIVIDAD
+===================== */
+.form-actividad {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.form-actividad input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-actividad input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 6px rgba(46, 204, 113, 0.4);
+}
+
+/* Animación suave al aparecer */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
